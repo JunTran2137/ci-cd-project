@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Building HTML app"
+      - zip -r demo.zip .
+artifacts:
+  files:
+    - demo.zip
