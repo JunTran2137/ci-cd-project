@@ -1,19 +1,9 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      nodejs: 22
-    commands:
-      - echo "Installing dependencies..."
-      - npm install
   build:
     commands:
-      - echo "Build started..."
-      - npm run build  # Nếu không có bước build, có thể bỏ qua
-  post_build:
-    commands:
-      - echo "Build completed!"
+      - echo "Building HTML app"
+      - zip -r app.zip .
 artifacts:
   files:
-    - '**/*'
-  base-directory: '.'
+    - app.zip
