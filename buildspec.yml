@@ -1,9 +1,13 @@
 version: 0.2
+
 phases:
   build:
     commands:
-      - echo "Building HTML app"
-      - zip -r app.zip .
+      - echo "No build required for static HTML"
+      - echo "Preparing files for deployment..."
+
 artifacts:
   files:
-    - app.zip
+    - '**/*.html'  # Chỉ lấy các file HTML
+  base-directory: '.'
+  discard-paths: no
